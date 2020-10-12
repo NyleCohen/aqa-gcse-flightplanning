@@ -158,9 +158,9 @@ Welcome to the airline profit calculator
                     clear()
                     print('Max flight range is bigger than distance to airport, returning to main menu')
                     mainMenu()
-        stdSeatPrice = float(input('Enter the price of a standard seat\n'))
+        stdSeatPrice = float(input('Enter the price of a standard seat\n£'))
         clear()
-        fcSeatPrice = float(input('Enter the price of a first class seat\n'))
+        fcSeatPrice = float(input('Enter the price of a first class seat\n£'))
         clear()
         # Calculate flight cost per seat
         if(selectedAircraftType == 'Medium narrow body'):
@@ -182,7 +182,7 @@ Welcome to the airline profit calculator
         flightIncome = firstClassSeats*fcSeatPrice+standardSeats*stdSeatPrice
         flightProfit = flightIncome-flightCost
         clear()
-        print("=========================================\n\n" + "Flight cost per seat: " + str(flightCostPS) + "\nFlight cost: " + str(flightCost) + "\nFlight income: " + str(flightCost) + "\nFlight profit: " + str(flightProfit))
+        print("=========================================\n\n" + "Flight cost per seat: £" + str(flightCostPS) + "\nFlight cost: £" + str(flightCost) + "\nFlight income: £" + str(flightCost) + "\nFlight profit: £" + str(flightProfit))
         mainMenu()
     if(menuSelection == '4'):
         restartPrompt = input('Are you sure you want to clear all data? Y/N\n')
