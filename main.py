@@ -84,7 +84,7 @@ Welcome to the airline profit calculator
                     clear()
                     print('First class seats less than minimum, returning to main menu.')
                     mainMenu()
-                if(firstClassSeats > int(larNarBody['Capacity if all seats are standard-class'])):
+                elif(firstClassSeats > int(larNarBody['Capacity if all seats are standard-class'])):
                     clear()
                     print('First class seats greater then capacity, returning to main menu.')
                     mainMenu()
@@ -100,7 +100,7 @@ Welcome to the airline profit calculator
                     clear()
                     print('First class seats less than minimum, returning to main menu.')
                     mainMenu()
-                if(firstClassSeats > int(medWidBody['Capacity if all seats are standard-class'])):
+                elif(firstClassSeats > int(medWidBody['Capacity if all seats are standard-class'])):
                     clear()
                     print('First class seats greater then capacity, returning to main menu.')
                     mainMenu()
@@ -112,6 +112,7 @@ Welcome to the airline profit calculator
             clear()
             print('Invalid aircraft type, returning to main menu')
             mainMenu()
+    # Calculate profit
     if(menuSelection == '3'):
         if(ukAirport == None or abrAirport == None):
             clear()
@@ -184,6 +185,7 @@ Welcome to the airline profit calculator
         clear()
         print("=========================================\n\n" + "Flight cost per seat: £" + str(flightCostPS) + "\nFlight cost: £" + str(flightCost) + "\nFlight income: £" + str(flightCost) + "\nFlight profit: £" + str(flightProfit))
         mainMenu()
+    # Clear all data
     if(menuSelection == '4'):
         restartPrompt = input('Are you sure you want to clear all data? Y/N\n')
         if(restartPrompt == 'Y' or restartPrompt == 'y'):
